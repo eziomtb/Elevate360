@@ -61,14 +61,14 @@ const ProgressRing: React.FC<ProgressRingProps> = ({
         />
       </svg>
       
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        <span className="text-sm font-semibold text-gray-800">
-          {normalizedProgress}%
-        </span>
-        {label && (
+      {label && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <span className="text-xs font-semibold text-gray-800">
+            {normalizedProgress}%
+          </span>
           <span className="text-xs text-gray-500">{label}</span>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
